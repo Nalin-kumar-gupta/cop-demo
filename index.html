@@ -10,192 +10,217 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f9;
+            background-color: #e9edf0;
             margin: 0;
             padding: 0;
+            color: #333;
         }
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #0073e6, #003366);
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: #fff;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
-            font-size: 3em;
+            font-size: 3.5em;
             font-weight: 700;
         }
 
         header p {
-            margin: 10px 0;
-            font-size: 1.2em;
+            margin: 15px 0;
+            font-size: 1.3em;
+        }
+
+        .button {
+            background-color: #ffffff;
+            color: #6a11cb;
+            padding: 12px 18px;
+            border: 2px solid #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #6a11cb;
+            color: #fff;
         }
 
         /* Main Content */
         main {
             width: 90%;
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 20px;
         }
 
         section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         section h2 {
-            font-size: 2.2em;
-            color: #0044cc;
-            border-bottom: 2px solid #f4f4f9;
+            font-size: 2.4em;
+            color: #6a11cb;
             padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #2575fc;
         }
 
         section p {
-            font-size: 1.1em;
+            font-size: 1.2em;
             line-height: 1.6em;
-        }
-
-        .button {
-            background-color: #0044cc;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .button:hover {
-            background-color: #003399;
+            margin-bottom: 20px;
         }
 
         /* Features Section */
         .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
 
         .feature-item {
-            background-color: #eef3ff;
+            background-color: #ffffff;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .feature-item h3 {
+            color: #2575fc;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .feature-video {
+            margin-top: 20px;
             border-radius: 8px;
-            flex: 1 1 calc(50% - 20px);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
         /* Technologies Section */
         .tech-logos {
             display: flex;
-            gap: 20px;
+            justify-content: space-around;
             flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
         }
 
         .tech-logos img {
-            width: 100px;
+            width: 80px;
             height: auto;
+            transition: transform 0.3s;
         }
 
-        /* Media Section */
-        .media {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .media-item {
-            flex: 1 1 calc(50% - 20px);
-        }
-
-        .media-item img, .media-item video {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .tech-logos img:hover {
+            transform: scale(1.1);
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #0044cc;
-            color: white;
+            padding: 30px;
+            background-color: #6a11cb;
+            color: #fff;
+            margin-top: 60px;
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>Cloud Observability Platform</h1>
-        <p>An end-to-end solution for real-time monitoring of Kubernetes applications</p>
+        <p>Your all-in-one solution for real-time Kubernetes log monitoring and visualization</p>
         <a class="button" href="https://nalin-kumar-gupta.github.io/amd-demo/" target="_blank">View on GitHub</a>
     </header>
 
+    <!-- Main Content -->
     <main>
-        <!-- Project Description -->
-        <section id="project-overview">
-            <h2>Overview</h2>
-            <p>I developed a Cloud Observability Platform designed to monitor real-time logs and metrics of multiple applications running on a Kubernetes cluster. The platform uses FluentD to capture and transmit logs, which are then stored, processed, and displayed on a user-friendly, customizable dashboard built from scratch.</p>
+        <!-- Overview Section -->
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <p>The Cloud Observability Platform is designed to provide seamless real-time log monitoring for applications running on a Kubernetes cluster. By leveraging FluentD for log collection, the platform captures and visualizes logs, providing detailed insights through a custom dashboard.</p>
         </section>
 
-        <!-- Key Features -->
+        <!-- Key Features Section -->
         <section id="features">
             <h2>Key Features</h2>
             <div class="features">
+                <!-- Feature 1 -->
                 <div class="feature-item">
                     <h3>Real-Time Log Monitoring</h3>
-                    <p>Continuously tracks and displays logs from applications deployed in the Kubernetes cluster, providing timely insights for troubleshooting.</p>
+                    <p>Continuously tracks and displays live logs from applications within the Kubernetes cluster for immediate troubleshooting and monitoring.</p>
+                    <div class="feature-video">
+                        <video controls width="100%">
+                            <source src="path/to/video-log-monitoring.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
+                
+                <!-- Feature 2 -->
                 <div class="feature-item">
-                    <h3>Customizable Dashboard</h3>
-                    <p>A visually appealing and interactive dashboard allows you to filter, search, and analyze application and database logs in a streamlined way.</p>
+                    <h3>Interactive Dashboard</h3>
+                    <p>A user-friendly dashboard with dynamic widgets to search, filter, and visualize the collected logs, offering in-depth insights into your applications' performance.</p>
+                    <div class="feature-video">
+                        <video controls width="100%">
+                            <source src="path/to/video-dashboard.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
+
+                <!-- Feature 3 -->
                 <div class="feature-item">
-                    <h3>Log Collection with FluentD</h3>
-                    <p>Implemented FluentD DaemonSets for seamless log collection and forwarding to the backend service.</p>
+                    <h3>FluentD Log Collection</h3>
+                    <p>Efficiently captures logs from the Kubernetes cluster using FluentD, ensuring that all logs are securely transmitted to the backend service for storage and analysis.</p>
+                    <div class="feature-video">
+                        <video controls width="100%">
+                            <source src="path/to/video-fluentd.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
+
+                <!-- Feature 4 -->
                 <div class="feature-item">
-                    <h3>Scalable & Extensible</h3>
-                    <p>The platform is designed to handle logs from multiple sources, making it adaptable for growing cloud environments.</p>
+                    <h3>Scalable & Extensible Design</h3>
+                    <p>The platform can handle multiple sources and log types, making it easy to scale as your cloud environment grows.</p>
+                    <div class="feature-video">
+                        <video controls width="100%">
+                            <source src="path/to/video-scalable.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technologies Used -->
+        <!-- Technologies Section -->
         <section id="technologies">
             <h2>Technologies Used</h2>
             <div class="tech-logos">
-                <img src="path/to/kubernetes-logo.png" alt="Kubernetes">
-                <img src="path/to/docker-logo.png" alt="Docker">
-                <img src="path/to/fluentd-logo.png" alt="FluentD">
-                <img src="path/to/django-logo.png" alt="Django">
-            </div>
-        </section>
-
-        <!-- Media Showcase -->
-        <section id="media">
-            <h2>Project Showcase</h2>
-            <div class="media">
-                <!-- Screenshot Example -->
-                <div class="media-item">
-                    <img src="path/to/screenshot1.png" alt="Dashboard Screenshot">
-                </div>
-                <!-- Video Example -->
-                <div class="media-item">
-                    <video controls>
-                        <source src="path/to/demo-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <img src="path/to/kubernetes-logo.png" alt="Kubernetes Logo">
+                <img src="path/to/docker-logo.png" alt="Docker Logo">
+                <img src="path/to/fluentd-logo.png" alt="FluentD Logo">
+                <img src="path/to/django-logo.png" alt="Django Logo">
             </div>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Cloud Observability Platform. Created with passion and Kubernetes.</p>
+        <p>&copy; 2024 Cloud Observability Platform. Built with Kubernetes, FluentD, and passion for cloud monitoring.</p>
     </footer>
 </body>
 </html>
