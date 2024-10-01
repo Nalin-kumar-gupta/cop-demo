@@ -3,51 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STGI Hackathon: Build Your Own Observability Platform</title>
+    <title>Cloud Observability Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f9;
-            color: #333;
             margin: 0;
             padding: 0;
         }
 
+        /* Header */
         header {
-            background-color: #0044cc;
+            background: linear-gradient(135deg, #0073e6, #003366);
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 50px 20px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: 700;
         }
 
         header p {
             margin: 10px 0;
+            font-size: 1.2em;
         }
 
+        /* Main Content */
         main {
             width: 90%;
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         section {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         section h2 {
-            font-size: 2em;
+            font-size: 2.2em;
             color: #0044cc;
             border-bottom: 2px solid #f4f4f9;
             padding-bottom: 10px;
@@ -56,24 +56,6 @@
         section p {
             font-size: 1.1em;
             line-height: 1.6em;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            background-color: #eef3ff;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 4px;
-        }
-
-        code {
-            background-color: #f1f1f1;
-            padding: 2px 4px;
-            border-radius: 4px;
         }
 
         .button {
@@ -92,10 +74,54 @@
             background-color: #003399;
         }
 
+        /* Features Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-item {
+            background-color: #eef3ff;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1 1 calc(50% - 20px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Technologies Section */
+        .tech-logos {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tech-logos img {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Media Section */
+        .media {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .media-item {
+            flex: 1 1 calc(50% - 20px);
+        }
+
+        .media-item img, .media-item video {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px;
-            margin-top: 40px;
+            padding: 20px;
             background-color: #0044cc;
             color: white;
         }
@@ -103,70 +129,73 @@
 </head>
 <body>
     <header>
-        <h1>STGI Hackathon</h1>
-        <p>Build Your Own Observability Platform</p>
+        <h1>Cloud Observability Platform</h1>
+        <p>An end-to-end solution for real-time monitoring of Kubernetes applications</p>
+        <a class="button" href="https://nalin-kumar-gupta.github.io/amd-demo/" target="_blank">View on GitHub</a>
     </header>
 
     <main>
-        <section id="background">
-            <h2>Background</h2>
-            <p>In modern cloud environments, monitoring and observability are crucial for keeping applications running smoothly. In this hackathon, your challenge is to create a basic cloud monitoring tool. It will collect, process, and display logs and metrics from a Kubernetes cluster (control plane as well as pods).</p>
+        <!-- Project Description -->
+        <section id="project-overview">
+            <h2>Overview</h2>
+            <p>I developed a Cloud Observability Platform designed to monitor real-time logs and metrics of multiple applications running on a Kubernetes cluster. The platform uses FluentD to capture and transmit logs, which are then stored, processed, and displayed on a user-friendly, customizable dashboard built from scratch.</p>
         </section>
 
-        <section id="challenge">
-            <h2>Challenge</h2>
-            <p>You will set up a Kubernetes cluster (using Minikube) with two applications, a PostgreSQL and a MySQL database, running on your local machine. Your task is to build a monitoring solution that collects logs from the applications running in the Minikube cluster, authenticates them, stores them in a time series database, and visualizes them in a custom dashboard.</p>
+        <!-- Key Features -->
+        <section id="features">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <h3>Real-Time Log Monitoring</h3>
+                    <p>Continuously tracks and displays logs from applications deployed in the Kubernetes cluster, providing timely insights for troubleshooting.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Customizable Dashboard</h3>
+                    <p>A visually appealing and interactive dashboard allows you to filter, search, and analyze application and database logs in a streamlined way.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Log Collection with FluentD</h3>
+                    <p>Implemented FluentD DaemonSets for seamless log collection and forwarding to the backend service.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Scalable & Extensible</h3>
+                    <p>The platform is designed to handle logs from multiple sources, making it adaptable for growing cloud environments.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="requirements">
-            <h2>Requirements</h2>
-            <ul>
-                <li><strong>Initial Setup:</strong> Create a Minikube cluster hosting two apps and databases.</li>
-                <li><strong>Log Collection:</strong> Use Fluent Bit, FluentD, or Logstash to gather logs from application pods.</li>
-                <li><strong>Backend Service:</strong> Develop a backend service to receive logs and implement authentication.</li>
-                <li><strong>Time Series Database:</strong> Store and organize logs efficiently.</li>
-                <li><strong>Visualization Dashboard:</strong> Build a custom web-based dashboard for log display and analysis.</li>
-                <li><strong>Database Metrics Monitoring:</strong> Collect and visualize PostgreSQL database metrics.</li>
-                <li><strong>AWS Integration:</strong> Integrate AWS resources and visualize combined metrics.</li>
-                <li><strong>Efficient Search (Bonus):</strong> Add keyword-based search and filtering capabilities.</li>
-            </ul>
+        <!-- Technologies Used -->
+        <section id="technologies">
+            <h2>Technologies Used</h2>
+            <div class="tech-logos">
+                <img src="path/to/kubernetes-logo.png" alt="Kubernetes">
+                <img src="path/to/docker-logo.png" alt="Docker">
+                <img src="path/to/fluentd-logo.png" alt="FluentD">
+                <img src="path/to/django-logo.png" alt="Django">
+            </div>
         </section>
 
-        <section id="tools">
-            <h2>Suggested Tools</h2>
-            <p>For web development and visualization, you can use any stack like React, Django, Go, Node, etc.</p>
-        </section>
-
-        <section id="setup">
-            <h2>Initial Setup</h2>
-            <ul>
-                <li>Install Docker: <a class="button" href="https://www.docker.com/get-started">Get Docker</a></li>
-                <li>Install and Start Minikube: <a class="button" href="https://minikube.sigs.k8s.io/docs/start/">Minikube Installation Guide</a></li>
-                <li>Clone Sample Applications: 
-                    <ul>
-                        <li><a href="https://github.com/tanishsummit/PyEditorial">app-1: PyEditorial</a></li>
-                        <li><a href="https://github.com/manjillama/docker-node-crud-mysql">app-2: Docker Node CRUD MySQL</a></li>
-                    </ul>
-                </li>
-                <li>Create Kubernetes Deployments and Services for both applications and databases.</li>
-                <li>Perform a sanity check to verify that all apps and databases are running correctly.</li>
-            </ul>
-        </section>
-
-        <section id="evaluation">
-            <h2>Evaluation Criteria</h2>
-            <p>Your project will be evaluated based on the following:</p>
-            <ul>
-                <li><strong>Functionality:</strong> Effective log collection, processing, and visualization.</li>
-                <li><strong>Usability:</strong> User-friendly dashboard interface.</li>
-                <li><strong>Completeness:</strong> Well-structured insights provided by the tool.</li>
-                <li><strong>Bonus:</strong> Efficient search and filtering capabilities.</li>
-            </ul>
+        <!-- Media Showcase -->
+        <section id="media">
+            <h2>Project Showcase</h2>
+            <div class="media">
+                <!-- Screenshot Example -->
+                <div class="media-item">
+                    <img src="path/to/screenshot1.png" alt="Dashboard Screenshot">
+                </div>
+                <!-- Video Example -->
+                <div class="media-item">
+                    <video controls>
+                        <source src="path/to/demo-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 STGI Hackathon. All rights reserved.</p>
+        <p>&copy; 2024 Cloud Observability Platform. Created with passion and Kubernetes.</p>
     </footer>
 </body>
 </html>
