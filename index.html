@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #e9edf0;
+            background-color: #f0f4f8;
             margin: 0;
             padding: 0;
             color: #333;
@@ -18,11 +18,11 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background: linear-gradient(135deg, #0052cc, #007bff);
             color: #fff;
             text-align: center;
-            padding: 60px 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 70px 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         header h1 {
@@ -38,7 +38,7 @@
 
         .button {
             background-color: #ffffff;
-            color: #6a11cb;
+            color: #0052cc;
             padding: 12px 18px;
             border: 2px solid #fff;
             border-radius: 25px;
@@ -50,7 +50,7 @@
         }
 
         .button:hover {
-            background-color: #6a11cb;
+            background-color: #0052cc;
             color: #fff;
         }
 
@@ -68,10 +68,10 @@
 
         section h2 {
             font-size: 2.4em;
-            color: #6a11cb;
+            color: #0052cc;
             padding-bottom: 10px;
             margin-bottom: 20px;
-            border-bottom: 3px solid #2575fc;
+            border-bottom: 3px solid #007bff;
         }
 
         section p {
@@ -83,7 +83,7 @@
         /* Features Section */
         .features {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
@@ -96,7 +96,7 @@
         }
 
         .feature-item h3 {
-            color: #2575fc;
+            color: #007bff;
             font-size: 1.6em;
             margin-bottom: 15px;
         }
@@ -105,6 +105,12 @@
             margin-top: 20px;
             border-radius: 8px;
             overflow: hidden;
+        }
+
+        .feature-video video {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         /* Technologies Section */
@@ -130,7 +136,7 @@
         footer {
             text-align: center;
             padding: 30px;
-            background-color: #6a11cb;
+            background-color: #0052cc;
             color: #fff;
             margin-top: 60px;
         }
@@ -158,10 +164,10 @@
             <div class="features">
                 <!-- Feature 1 -->
                 <div class="feature-item">
-                    <h3>Deployed multiple apps on kubernetes</h3>
-                    <p>Multiple applications in the cluster are running and their logs can be seen.</p>
+                    <h3>Deployed Multiple Apps on Kubernetes</h3>
+                    <p>Multiple applications in the cluster are running, and their logs can be seen in real-time.</p>
                     <div class="feature-video">
-                        <video controls width="100%">
+                        <video autoplay muted loop playsinline>
                             <source src="logger_django.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -173,7 +179,7 @@
                     <h3>Interactive Dashboard</h3>
                     <p>A user-friendly dashboard with dynamic widgets to search, filter, and visualize the collected logs, offering in-depth insights into your applications' performance.</p>
                     <div class="feature-video">
-                        <video controls width="100%">
+                        <video autoplay muted loop playsinline>
                             <source src="path/to/video-dashboard.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -185,7 +191,7 @@
                     <h3>FluentD Log Collection</h3>
                     <p>Efficiently captures logs from the Kubernetes cluster using FluentD, ensuring that all logs are securely transmitted to the backend service for storage and analysis.</p>
                     <div class="feature-video">
-                        <video controls width="100%">
+                        <video autoplay muted loop playsinline>
                             <source src="./video-fluentd.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -197,7 +203,7 @@
                     <h3>Scalable & Extensible Design</h3>
                     <p>The platform can handle multiple sources and log types, making it easy to scale as your cloud environment grows.</p>
                     <div class="feature-video">
-                        <video controls width="100%">
+                        <video autoplay muted loop playsinline>
                             <source src="path/to/video-scalable.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
